@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cosmic Dark Theme */
+    --background: 240 20% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 15% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Neon Purple Primary */
+    --primary: 265 89% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Cyan Secondary */
+    --secondary: 187 85% 53%;
+    --secondary-foreground: 240 20% 4%;
+
+    /* Neon Green Accent */
+    --accent: 160 100% 45%;
+    --accent-foreground: 240 20% 4%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 15%;
+    --ring: 265 89% 66%;
+
+    --radius: 0.75rem;
+
+    /* Custom Neon Colors */
+    --neon-purple: 265 89% 66%;
+    --neon-cyan: 187 85% 53%;
+    --neon-green: 160 100% 45%;
+    --neon-pink: 330 90% 65%;
+
+    /* Glassmorphism */
+    --glass-bg: 240 15% 10% / 0.6;
+    --glass-border: 240 10% 30% / 0.3;
+    --glass-blur: 20px;
+
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)), hsl(var(--neon-green)));
+    --gradient-purple-cyan: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(var(--neon-purple) / 0.3), transparent 70%);
+
+    /* Shadows */
+    --shadow-neon-purple: 0 0 20px hsl(var(--neon-purple) / 0.5), 0 0 40px hsl(var(--neon-purple) / 0.3);
+    --shadow-neon-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.5), 0 0 40px hsl(var(--neon-cyan) / 0.3);
+    --shadow-neon-green: 0 0 15px hsl(var(--neon-green) / 0.6);
+    --shadow-glass: 0 8px 32px hsl(240 20% 4% / 0.4);
+
+    --sidebar-background: 240 15% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 265 89% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 265 89% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl;
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--neon-purple) / 0.5), hsl(var(--neon-cyan) / 0.5), transparent);
+  }
+
+  /* Neon Text */
+  .text-neon {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-neon-glow {
+    text-shadow: 0 0 10px hsl(var(--neon-purple) / 0.5), 
+                 0 0 20px hsl(var(--neon-cyan) / 0.3),
+                 0 0 30px hsl(var(--neon-green) / 0.2);
+  }
+
+  /* Neon Button */
+  .btn-neon {
+    @apply relative px-6 py-3 font-semibold rounded-lg overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
+    box-shadow: var(--shadow-neon-purple);
+  }
+
+  .btn-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px hsl(var(--neon-purple) / 0.6), 0 0 60px hsl(var(--neon-cyan) / 0.4);
+  }
+
+  .btn-neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-neon:hover::before {
+    left: 100%;
+  }
+
+  /* Neon Outline Button */
+  .btn-neon-outline {
+    @apply relative px-6 py-3 font-semibold rounded-lg overflow-hidden transition-all duration-300;
+    background: transparent;
+    border: 2px solid hsl(var(--neon-cyan));
+    color: hsl(var(--neon-cyan));
+  }
+
+  .btn-neon-outline:hover {
+    background: hsl(var(--neon-cyan) / 0.1);
+    box-shadow: var(--shadow-neon-cyan);
+    transform: translateY(-2px);
+  }
+
+  /* Pulsing Dot */
+  .pulse-dot {
+    @apply relative inline-block w-2 h-2 rounded-full;
+    background: hsl(var(--neon-green));
+    box-shadow: var(--shadow-neon-green);
+    animation: pulse-glow 2s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 10px hsl(var(--neon-green) / 0.8), 0 0 20px hsl(var(--neon-green) / 0.4);
+    }
+    50% {
+      opacity: 0.7;
+      box-shadow: 0 0 5px hsl(var(--neon-green) / 0.6), 0 0 10px hsl(var(--neon-green) / 0.2);
+    }
+  }
+
+  /* HUD Badge */
+  .hud-badge {
+    @apply px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider;
+    background: hsl(var(--muted));
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Scanline Overlay */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(240 20% 4% / 0.03) 2px,
+      hsl(240 20% 4% / 0.03) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Service Card Hover */
+  .service-card {
+    @apply glass-card p-5 transition-all duration-300 cursor-pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: hsl(var(--neon-purple) / 0.5);
+    box-shadow: var(--shadow-neon-purple), var(--shadow-glass);
+  }
+
+  /* Tab Active */
+  .tab-active {
+    background: linear-gradient(135deg, hsl(var(--neon-purple) / 0.2), hsl(var(--neon-cyan) / 0.1));
+    border-color: hsl(var(--neon-purple));
+    color: hsl(var(--foreground));
+  }
+
+  /* Navbar Glass */
+  .navbar-glass {
+    background: hsl(240 15% 6% / 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid hsl(var(--border));
+  }
+}
+
+@layer utilities {
+  /* Starfield Animation Base */
+  .starfield {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow Effects */
+  .glow-purple {
+    box-shadow: var(--shadow-neon-purple);
+  }
+
+  .glow-cyan {
+    box-shadow: var(--shadow-neon-cyan);
+  }
+
+  .glow-green {
+    box-shadow: var(--shadow-neon-green);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(var(--neon-purple)), hsl(var(--neon-green)));
+}
