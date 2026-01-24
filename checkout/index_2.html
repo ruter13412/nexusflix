@@ -1,0 +1,816 @@
+<!DOCTYPE html><html lang="pt" data-scrapbook-source="https://js.stripe.com/v3/elements-inner-express-checkout-a1941213d94208bed39d91c0f687e82e.html"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_Mj7vnT"></div><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="elements-inner-express-checkout-9dc5748c2a2f08a0f1f23936fb488834.css" rel="stylesheet"><style></style><style>
+:root {
+  --accessibleColorOnColorPrimary: #ffffff;
+  --p-colorPrimaryHover: #0b81fa;
+  --p-colorPrimaryActive: #228cfa;
+  --p-colorPrimaryAlpha20: hsla(210, 96%, 45%, 25%);
+  --p-colorPrimaryAlpha40: hsla(210, 96%, 45%, 40%);
+  --p-colorPrimaryAlpha50: hsla(210, 96%, 45%, 50%);
+  --p-colorPrimaryDisabled: #d9d9d9;
+  --p-colorPrimaryDisabledText: #8d8d8d;
+  --accessibleColorOnColorBackground: #30313d;
+  --p-colorBackgroundDivider: #f2f2f2;
+  --p-colorBackgroundDisabled: #f2f2f2;
+  --p-colorBackgroundDisabledDeemphasize05: #e6e6e6;
+  --p-colorBackgroundDeemphasize03: #f7f7f7;
+  --p-colorBackgroundDeemphasize05: #f2f2f2;
+  --p-colorBackgroundDeemphasize10: #e6e6e6;
+  --p-colorBackgroundDeemphasize15: #d9d9d9;
+  --p-colorBackgroundDeemphasize20: #cccccc;
+  --p-colorBackgroundLightenAbsolute05: #ffffff;
+  --p-colorBackgroundContrastAlpha05: rgba(0, 0, 0, 0.05);
+  --p-colorBackgroundContrastAlpha08: rgba(0, 0, 0, 0.08);
+  --p-colorBackgroundContrastAlpha30: rgba(0, 0, 0, 0.3);
+  --colorTextSecondary: #6d6e78;
+  --colorTextPlaceholder: #757680;
+  --accessibleColorOnColorSuccess: #fff;
+  --accessibleColorOnColorDanger: #fff;
+  --accessibleColorOnColorWarning: #30313d;
+  --p-linkProtectionsBadgeBackground: #1d3944;
+  --p-linkProtectionsBadgeColor: #fff;
+  --fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --fontSmooth: always;
+  --fontVariantLigatures: normal;
+  --fontVariationSettings: normal;
+  --fontLineHeight: 1.45;
+  --fontSizeBase: 1rem;
+  --fontSizeSm: 0.93rem;
+  --fontSizeXs: 0.875rem;
+  --fontSize2Xs: 0.8125rem;
+  --fontSize3Xs: 0.75rem;
+  --fontSizeLg: 1.0625rem;
+  --fontSizeXl: 1.125rem;
+  --fontSize2Xl: 1.25rem;
+  --fontWeightLight: 300;
+  --fontWeightNormal: 400;
+  --fontWeightMedium: 600;
+  --fontWeightBold: bold;
+  --colorPrimary: #0570de;
+  --colorBackground: #fff;
+  --colorText: #30313d;
+  --colorSuccess: #30b130;
+  --colorDanger: #df1b41;
+  --colorWarning: #f6e6b9;
+  --iconColor: var(--colorTextSecondary);
+  --iconHoverColor: var(--colorText);
+  --iconCheckmarkColor: var(--colorPrimaryText);
+  --iconCardErrorColor: var(--colorDanger);
+  --iconCardCvcColor: var(--iconColor);
+  --iconCardCvcErrorColor: var(--colorDanger);
+  --iconChevronDownColor: var(--iconColor);
+  --iconChevronDownHoverColor: var(--iconHoverColor);
+  --iconCloseColor: var(--iconColor);
+  --iconCloseHoverColor: var(--iconHoverColor);
+  --iconLoadingIndicatorColor: var(--p-colorBackgroundContrastAlpha30);
+  --iconMenuColor: var(--colorPrimary);
+  --iconMenuHoverColor: var(--iconMenuColor);
+  --iconMenuOpenColor: var(--iconMenuColor);
+  --iconPasscodeDeviceColor: var(--iconColor);
+  --iconPasscodeDeviceHoverColor: var(--iconHoverColor);
+  --iconPasscodeDeviceNotificationColor: var(--colorPrimary);
+  --iconRedirectColor: currentColor;
+  --tabIconColor: var(--iconColor);
+  --tabIconHoverColor: var(--colorText);
+  --tabIconSelectedColor: var(--colorPrimary);
+  --tabIconMoreColor: var(--iconColor);
+  --tabIconMoreHoverColor: var(--colorText);
+  --spacingUnit: 0.25rem;
+  --gridRowSpacing: var(--p-spacing3);
+  --gridColumnSpacing: var(--p-spacing3);
+  --tabSpacing: var(--p-spacing1);
+  --pickerItemSpacing: var(--p-spacing2);
+  --accordionItemSpacing: var(--p-spacing2);
+  --borderRadius: 6px;
+  --focusBoxShadow: 0 0 0 3px var(--p-colorPrimaryAlpha20), 0 1px 1px 0 var(--p-colorBackgroundContrastAlpha08);
+  --focusOutline: 0px;
+  --buttonBorderRadius: 6px;
+  --spacingGridRow: var(--gridRowSpacing);
+  --spacingGridColumn: var(--gridColumnSpacing);
+  --spacingTab: var(--tabSpacing);
+  --spacingPickerItem: var(--pickerItemSpacing);
+  --spacingAccordionItem: var(--accordionItemSpacing);
+  --colorPrimaryText: var(--accessibleColorOnColorPrimary);
+  --colorBackgroundText: var(--accessibleColorOnColorBackground);
+  --colorSuccessText: var(--accessibleColorOnColorSuccess);
+  --colorDangerText: var(--accessibleColorOnColorDanger);
+  --colorWarningText: var(--accessibleColorOnColorWarning);
+  --colorIcon: var(--iconColor);
+  --colorIconHover: var(--iconHoverColor);
+  --colorIconCardError: var(--iconCardErrorColor);
+  --colorIconCardCvc: var(--iconCardCvcColor);
+  --colorIconCardCvcError: var(--iconCardCvcErrorColor);
+  --colorIconCheckmark: var(--iconCheckmarkColor);
+  --colorIconChevronDown: var(--iconChevronDownColor);
+  --colorIconChevronDownHover: var(--iconChevronDownHoverColor);
+  --colorIconClose: var(--iconCloseColor);
+  --colorIconCloseHover: var(--iconCloseHoverColor);
+  --colorIconLoadingIndicator: var(--iconLoadingIndicatorColor);
+  --colorIconMenu: var(--iconMenuColor);
+  --colorIconMenuHover: var(--iconMenuHoverColor);
+  --colorIconMenuOpen: var(--iconMenuOpenColor);
+  --colorIconPasscodeDevice: var(--iconPasscodeDeviceColor);
+  --colorIconPasscodeDeviceHover: var(--iconPasscodeDeviceHoverColor);
+  --colorIconPasscodeDeviceNotification: var(--iconPasscodeDeviceNotificationColor);
+  --colorIconRedirect: var(--iconRedirectColor);
+  --colorIconTab: var(--tabIconColor);
+  --colorIconTabHover: var(--tabIconHoverColor);
+  --colorIconTabSelected: var(--tabIconSelectedColor);
+  --colorIconTabMore: var(--tabIconMoreColor);
+  --colorIconTabMoreHover: var(--tabIconMoreHoverColor);
+  --colorLogo: var(--logoColor);
+  --colorLogoTab: var(--tabLogoColor);
+  --colorLogoTabSelected: var(--tabLogoSelectedColor);
+  --colorLogoBlock: var(--blockLogoColor);
+  --p-spacingXs: 1px;
+  --p-spacingSm: 2px;
+  --p-spacing1: 0.25rem;
+  --p-spacing2: 0.5rem;
+  --p-spacing3: 0.75rem;
+  --p-spacing4: 1rem;
+  --p-spacing5: 1.25rem;
+  --p-spacing6: 1.5rem;
+  --p-spacing7: 1.75rem;
+  --p-spacing8: 2rem;
+  --p-spacing9: 2.25rem;
+  --p-spacing10: 2.5rem;
+  --p-inputSpacingX: var(--p-spacing3);
+  --p-inputSpacingY: var(--p-spacing3);
+  --logoColor: light;
+  --p-logoLightDisplay: block;
+  --p-logoDarkDisplay: none;
+  --tabLogoColor: light;
+  --p-logoTabLightDisplay: block;
+  --p-logoTabDarkDisplay: none;
+  --tabLogoSelectedColor: light;
+  --p-logoTabSelectedLightDisplay: block;
+  --p-logoTabSelectedDarkDisplay: none;
+  --blockLogoColor: light;
+  --p-logoBlockLightDisplay: block;
+  --p-logoBlockDarkDisplay: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+
+.Action {
+  padding: var(--p-spacing1) calc(var(--p-spacing1) + var(--p-spacingSm));
+  background-color: transparent;
+  font-size: var(--fontSizeXs);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorPrimary);
+  border-radius: min(5px, var(--borderRadius), var(--buttonBorderRadius, var(--borderRadius)));
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.Action:hover {
+  background-color: var(--p-colorBackgroundContrastAlpha05);
+}
+
+.Action--tertiary {
+  color: var(--colorText);
+}
+
+.Action--danger {
+  color: var(--colorDanger);
+}
+
+.Action:disabled {
+  color: var(--p-colorPrimaryDisabledText);
+}
+
+.Block {
+  padding: var(--p-spacing3);
+  border-radius: var(--borderRadius);
+  background-color: var(--colorBackground);
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.Button {
+  padding: var(--p-spacing3);
+  background-color: var(--colorPrimary);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorPrimaryText);
+  border-radius: var(--buttonBorderRadius, var(--borderRadius));
+  transition: background 0.15s ease, color 0.15s ease, border 0.15s ease, box-shadow .15s ease;
+}
+
+.Button:hover {
+  background-color: var(--p-colorPrimaryHover);
+}
+
+.Button:active {
+  background-color: var(--p-colorPrimaryActive);
+}
+
+.Button:disabled {
+  background-color: var(--p-colorPrimaryDisabled);
+  color: var(--p-colorPrimaryDisabledText);
+}
+
+.CheckboxInput {
+  background-color: var(--colorBackground);
+  border-radius: min(5px, var(--borderRadius));
+  transition: background 0.15s ease, border 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.CheckboxInput--checked {
+  background-color: var(--colorPrimary);
+  border-color: var(--colorPrimary);
+}
+
+.Dropdown {
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 10px 24px rgba(0, 0, 0, 0.02);
+}
+
+.DropdownItem {
+  background-color: var(--colorBackground);
+  padding: var(--p-spacing2) var(--p-spacing3);
+}
+
+.Error {
+  margin-top: var(--p-spacing1);
+  color: var(--colorDanger);
+  font-size: var(--fontSizeSm);
+}
+
+.Icon {
+  transition: fill 0.1s ease;
+}
+
+.Input, .p-FauxInput {
+  padding: var(--p-inputSpacingY) var(--p-inputSpacingX);
+  background-color: var(--colorBackground);
+  border-radius: var(--borderRadius);
+  transition: background 0.15s ease, border 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.Input--invalid {
+  color: var(--colorDanger);
+  border-color: var(--colorDanger);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px var(--colorDanger);
+}
+
+.Input::placeholder, .p-Input--placeholder {
+  color: var(--colorTextPlaceholder);
+}
+
+.Input:disabled, .p-Input--disabled {
+  background-color: var(--p-colorBackgroundDisabled);
+  color: var(--colorTextPlaceholder);
+  border-color: var(--p-colorBackgroundDisabledDeemphasize05);
+  box-shadow: none;
+}
+
+.InputCloseIcon {
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.CodeInput {
+  border-radius: min(5px, var(--borderRadius));
+}
+
+.Label {
+  margin-bottom: var(--p-spacing1);
+  font-size: var(--fontSizeSm);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.Label--resting {
+  font-size: var(--fontSizeBase);
+}
+
+.Label--floating {
+  font-size: var(--fontSizeXs);
+  padding-bottom: max(var(--p-spacingSm), var(--p-spacing1));
+  opacity: 0.8;
+}
+
+.Menu {
+  padding: 0.375rem;
+}
+
+.MenuAction {
+  background-color: var(--p-colorBackgroundContrastAlpha05);
+  font-size: var(--fontSizeXs);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorPrimary);
+  border-radius: min(8px, var(--borderRadius), var(--buttonBorderRadius, var(--borderRadius)));
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.MenuAction--danger {
+  color: var(--colorDanger);
+}
+
+.MenuAction:hover {
+  background-color: var(--p-colorBackgroundContrastAlpha08);
+}
+
+.MenuIcon {
+  border-radius: min(8px, var(--borderRadius));
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.MenuIcon:hover {
+  background-color: var(--p-colorBackgroundContrastAlpha05);
+}
+
+.PasscodeShowIcon {
+  outline-offset: -2px;
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.PasscodeCloseIcon {
+  outline-offset: -2px;
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.PickerItem {
+  padding: var(--p-spacing3);
+  background-color: var(--colorBackground);
+  border-radius: var(--borderRadius);
+  transition: background 0.15s ease, box-shadow 0.15s ease, border 0.15s ease, color 0.15s ease;
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.PickerItem--new {
+  font-size: var(--fontSizeBase);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorPrimary);
+}
+
+.RedirectText {
+  color: var(--colorTextSecondary);
+}
+
+.Link {
+  color: var(--colorPrimary);
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.Link:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.Link:hover {
+  text-decoration: underline;
+}
+
+.RadioIcon {
+  width: 1.2em;
+}
+
+.RadioIconOuter {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 9.375;
+}
+
+.RadioIconInner {
+  r: 21.875px;
+  fill-opacity: 0;
+}
+
+.RadioIconInner--checked {
+  fill-opacity: 1;
+}
+
+.SecondaryLink {
+  color: var(--colorTextSecondary);
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.SecondaryLink:hover {
+  text-decoration: underline;
+}
+
+.Switch {
+  background-color: var(--p-colorBackgroundDeemphasize10);
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  transition: border 0.3s ease, background 0.2s ease, box-shadow 0.3s ease;
+}
+
+.Switch--checked {
+  background-color: var(--colorSuccess);
+  border-color: var(--colorSuccess);
+}
+
+.SwitchControl {
+  fill: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.Tab {
+  padding: var(--p-spacing3);
+  background-color: var(--colorBackground);
+  border-radius: var(--borderRadius);
+  font-size: var(--fontSizeXs);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorTextSecondary);
+  transition: background .15s ease, border .15s ease, box-shadow .15s ease;
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.Tab--selected {
+  border-color: var(--p-colorPrimary);
+  color: var(--colorPrimary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px var(--colorPrimary);
+}
+
+.TabLabel {
+  padding-top: var(--p-spacing1);
+  transition: color .1s ease;
+}
+
+.TermsText {
+  color: var(--colorTextSecondary);
+}
+
+.TermsLink {
+  color: var(--colorTextSecondary);
+  text-decoration: underline;
+  border-radius: min(5px, var(--borderRadius));
+  transition: box-shadow .15s ease;
+}
+
+.AccordionItem {
+  background-color: var(--colorBackground);
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  border-radius: var(--borderRadius);
+  color: var(--colorTextSecondary);
+  font-size: var(--fontSizeXs);
+  font-weight: var(--fontWeightMedium);
+  padding: var(--p-spacing4);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.AccordionItem--selected {
+  color: var(--colorPrimary);
+}
+
+.ToggleItem {
+  background-color: var(--colorBackground);
+  border: 1px solid var(--p-colorBackgroundDeemphasize10);
+  border-radius: var(--borderRadius);
+  padding: var(--p-spacing3);
+  transition: background .15s ease, border .15s ease, box-shadow .15s ease;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.Action:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.Button:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.CheckboxInput:focus, .p-CheckboxInput--focused {
+  outline: var(--focusOutline);
+  border-color: var(--colorPrimary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+}
+
+.DropdownItem--highlight {
+  background-color: var(--p-colorBackgroundDeemphasize03);
+}
+
+.Input:focus, .p-Input--focused {
+  outline: var(--focusOutline);
+  border-color: var(--colorPrimary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+}
+
+.InputCloseIcon:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--p-colorPrimaryAlpha40);
+}
+
+.MenuAction:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.MenuIcon:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.PasscodeShowIcon:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--p-colorPrimaryAlpha40);
+}
+
+.PasscodeCloseIcon:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--p-colorPrimaryAlpha40);
+}
+
+.PickerItem:focus-visible {
+  outline: var(--focusOutline);
+  border-color: var(--colorPrimary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+}
+
+.PickerItem:hover, .p-PickerItem--hovered {
+  background-color: var(--p-colorBackgroundDeemphasize03);
+  border-color: var(--p-colorBackgroundDeemphasize15);
+}
+
+.PickerItem:hover:focus-visible {
+  outline: var(--focusOutline);
+  background-color: var(--p-colorBackgroundDeemphasize03);
+  border-color: var(--p-colorPrimaryAlpha50);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+}
+
+.PickerItem--selected {
+  background-color: var(--colorBackground);
+  border-color: var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.PickerItem--selected:focus-visible {
+  background-color: var(--colorBackground);
+  border-color: var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.PickerItem--selected:hover, .p-PickerItem--selectedHovered {
+  background-color: var(--colorBackground);
+  border-color: var(--p-colorBackgroundDeemphasize10);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+.PickerItem--highlight {
+  box-shadow: 0 0 0 1px var(--colorPrimary);
+  border-color: var(--colorPrimary);
+}
+
+.PickerItem--highlight:hover, .p-PickerItem--highlightHovered {
+  box-shadow: 0 0 0 1px var(--colorPrimary);
+  border-color: var(--colorPrimary);
+}
+
+.PickerItem--highlight:focus-visible {
+  outline: var(--focusOutline);
+  border-color: var(--colorPrimary);
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.PickerItem--highlight:hover:focus-visible {
+  outline: var(--focusOutline);
+  background-color: var(--p-colorBackgroundDeemphasize03);
+  border-color: var(--colorPrimary);
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.PickerItem--disabled {
+  background-color: var(--p-colorBackgroundDisabled);
+  border-color: var(--p-colorBackgroundDisabledDeemphasize05);
+  color: var(--colorTextSecondary);
+}
+
+.PickerItem--disabled:hover, .p-PickerItem--disabledHovered {
+  background-color: var(--p-colorBackgroundDisabled);
+  border-color: var(--p-colorBackgroundDisabledDeemphasize05);
+  color: var(--colorTextSecondary);
+}
+
+.SecondaryLink:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.Switch:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.Tab:hover {
+  color: var(--colorText);
+}
+
+.Tab:focus {
+  outline: var(--focusOutline);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+  border-color: var(--colorPrimary);
+}
+
+.Tab--selected:focus {
+  border-color: var(--p-colorPrimary);
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.Tab--selected:hover {
+  color: var(--colorPrimary);
+}
+
+.TermsLink:focus-visible {
+  outline: var(--focusOutline);
+  box-shadow: var(--focusBoxShadow);
+}
+
+.AccordionItem:hover, .p-AccordionItem--hovered {
+  color: var(--colorText);
+}
+
+.AccordionItem:focus-visible, .p-AccordionItem--focused {
+  outline: var(--focusOutline);
+  border-color: var(--colorPrimary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+}
+
+.AccordionItem--selected:focus-visible {
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.AccordionItem--selected:hover, .p-AccordionItem--selectedHovered {
+  color: var(--colorPrimary);
+}
+
+.ToggleItem:focus, .p-ToggleItem--focused {
+  outline: var(--focusOutline);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), var(--focusBoxShadow);
+  border-color: var(--colorPrimary);
+}
+
+.ToggleItem:hover {
+  background-color: var(--p-colorBackgroundDeemphasize03);
+  border-color: var(--p-colorBackgroundDeemphasize15);
+}
+
+.ToggleItem:hover:focus, .p-ToggleItem--focused:hover {
+  border-color: var(--p-colorPrimaryAlpha50);
+}
+
+.ToggleItem--selected {
+  border-color: var(--colorPrimary);
+  box-shadow: 0 0 0 1px var(--colorPrimary);
+}
+
+.ToggleItem--selected:focus, .p-ToggleItem--selectedFocused {
+  box-shadow: var(--focusBoxShadow), 0 0 0 1px var(--colorPrimary);
+}
+
+.ToggleItem--selected:hover {
+  background-color: var(--colorBackground);
+  border-color: var(--colorPrimary);
+}</style><style>
+:root {
+  --c-inputPaddingTop: 12px;
+  --c-inputPaddingRight: 12px;
+  --c-inputPaddingBottom: 12px;
+  --c-inputPaddingLeft: 12px;
+  --c-inputBorderTopWidth: 0.8px;
+  --c-inputBorderRightWidth: 0.8px;
+  --c-inputBorderBottomWidth: 0.8px;
+  --c-inputBorderLeftWidth: 0.8px;
+  --c-inputColorScheme: light;
+  --c-inputDividerWidth: 1px;
+  --c-inputDividerBackgroundColor: var(--p-colorBackgroundDivider);
+  --c-inputBorderTopLeftRadius: 6px;
+  --c-inputBorderTopRightRadius: 6px;
+  --c-inputBorderBottomRightRadius: 6px;
+  --c-inputBorderBottomLeftRadius: 6px;
+  --c-inputFontSize: 16px;
+  --c-inputFontColor: rgb(48, 49, 61);
+  --c-inputHeight: 44px;
+  --c-inputSelectOptionBackgroundColor: rgb(255, 255, 255);
+  --c-inputSelectOptionTextColor: rgb(48, 49, 61);
+  --c-inputBoxShadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px;
+  --c-blockPaddingTop: 12px;
+  --c-blockPaddingRight: 12px;
+  --c-blockPaddingBottom: 12px;
+  --c-blockPaddingLeft: 12px;
+  --c-blockBackgroundColor: rgb(255, 255, 255);
+  --c-blockDividerWidth: 1px;
+  --c-blockDividerBackgroundColor: var(--p-colorBackgroundDivider);
+  --c-dropdownDividerWidth: 1px;
+  --c-dropdownDividerBackgroundColor: var(--p-colorBackgroundDivider);
+  --c-dropdownItemBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemPaddingTop: 12px;
+  --c-pickerItemPaddingRight: 12px;
+  --c-pickerItemPaddingBottom: 12px;
+  --c-pickerItemPaddingLeft: 12px;
+  --c-pickerItemBorderBottomWidth: 0.8px;
+  --c-pickerItemBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemHoveredBackgroundColor: rgb(247, 247, 247);
+  --c-pickerItemFocusedBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemSelectedBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemSelectedHoveredBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemHighlightBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemHighlightHoveredBackgroundColor: rgb(247, 247, 247);
+  --c-pickerItemHighlightFocusedBackgroundColor: rgb(255, 255, 255);
+  --c-pickerItemDisabledBackgroundColor: rgb(242, 242, 242);
+  --c-pickerItemDisabledHoveredBackgroundColor: rgb(242, 242, 242);
+  --c-pickerItemDisabledFocusedBackgroundColor: rgb(242, 242, 242);
+  --c-pickerItemTransitionDelay: 0s, 0s, 0s, 0s;
+  --c-pickerItemTransitionDuration: 0.15s, 0.15s, 0.15s, 0.15s;
+  --c-pickerItemTransitionProperty: background, box-shadow, border, color;
+  --c-pickerItemTransitionTimingFunction: ease, ease, ease, ease;
+  --c-actionPaddingTop: 4px;
+  --c-actionPaddingRight: 6px;
+  --c-actionPaddingBottom: 4px;
+  --c-actionPaddingLeft: 6px;
+  --c-labelRestingFontSize: 16px;
+  --c-labelFloatingHeight: 20.1px;
+  --c-labelFloatingTransform: translateY(12px) scale(0.8888888888888888);
+  --c-labelRestingTransform: translateY(23px) scale(1);
+  --c-inputFloatingPaddingTop: 32px;
+  --c-inputFloatingMarginLeft: 12px;
+  --c-inputFloatingMarginRight: 12px;
+  --c-acItemPaddingTop: 16px;
+  --c-acItemPaddingRight: 16px;
+  --c-acItemPaddingBottom: 16px;
+  --c-acItemPaddingLeft: 16px;
+  --c-acItemBorderTopWidth: 0.8px;
+  --c-acItemBorderRightWidth: 0.8px;
+  --c-acItemBorderBottomWidth: 0.8px;
+  --c-acItemBorderLeftWidth: 0.8px;
+  --c-acItemBorderWidth: 0.8px;
+  --c-acItemBorderColor: rgb(230, 230, 230);
+  --c-acItemBorderStyle: solid;
+  --c-acItemBorderRadius: 6px;
+  --c-acItemBorderTopLeftRadius: 6px;
+  --c-acItemBorderTopRightRadius: 6px;
+  --c-acItemBorderBottomRightRadius: 6px;
+  --c-acItemBorderBottomLeftRadius: 6px;
+  --c-acItemBackgroundColor: rgb(255, 255, 255);
+  --c-acItemColor: rgb(109, 110, 120);
+  --c-acBoxShadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px;
+  --c-acOutline: rgb(109, 110, 120) none 0px;
+  --c-acItemFont: 600 14px / 16.1px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --c-acItemHoveredBackgroundColor: rgb(255, 255, 255);
+  --c-acItemHoveredColor: rgb(48, 49, 61);
+  --c-acItemHoveredOutline: rgb(48, 49, 61) none 0px;
+  --c-acItemHoveredBorderColor: rgb(230, 230, 230);
+  --c-acItemFocusedBackgroundColor: rgb(255, 255, 255);
+  --c-acItemFocusedColor: rgb(109, 110, 120);
+  --c-acItemFocusedOutline: rgb(109, 110, 120) none 0px;
+  --c-acItemFocusedBoxShadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px, rgba(5, 115, 225, 0.25) 0px 0px 0px 3px, rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+  --c-acItemFocusedBorderColor: rgb(5, 112, 222);
+  --c-acItemSelectedBackgroundColor: rgb(255, 255, 255);
+  --c-acItemSelectedColor: rgb(5, 112, 222);
+  --c-acItemSelectedBorderColor: rgb(230, 230, 230);
+  --c-acItemSelectedHoveredBackgroundColor: rgb(255, 255, 255);
+  --c-acItemSelectedHoveredBorderColor: rgb(230, 230, 230);
+  --c-acItemSelectedHoveredColor: rgb(5, 112, 222);
+  --c-acItemSelectedBorderTopLeftRadius: 6px;
+  --c-acItemSelectedBorderTopRightRadius: 6px;
+  --c-acItemSelectedBorderBottomRightRadius: 6px;
+  --c-acItemSelectedBorderBottomLeftRadius: 6px;
+  --c-radioIconOuterStrokeWidth: 18.75;
+  --c-radioIconOuterCheckedStrokeWidth: 18.75;
+  --c-toggleItemFontSize: 16px;
+  --p-pickerItemBackgroundColorDeemphasize03: rgb(247, 247, 247);
+  --p-pickerItemBackgroundColorDeemphasize05: rgb(242, 242, 242);
+}
+  
+
+.Input:-webkit-autofill:not(.p-Input--delayAutofillStyles) {
+  -webkit-text-fill-color: rgb(48, 49, 61);
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+  transition: none !important;
+}
+
+.Input:-webkit-autofill:hover:not(.p-Input--delayAutofillStyles) {
+  -webkit-text-fill-color: rgb(48, 49, 61);
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+}
+
+.Input:-webkit-autofill:focus:not(.p-Input--delayAutofillStyles) {
+  -webkit-text-fill-color: rgb(48, 49, 61);
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px, rgba(5, 115, 225, 0.25) 0px 0px 0px 3px, rgba(0, 0, 0, 0.08) 0px 1px 1px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+}
+
+.Input[data-com-onepassword-filled]:not(.p-Input--delayAutofillStyles) {
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+  transition: none !important;
+}
+
+.Input[data-com-onepassword-filled]:hover:not(.p-Input--delayAutofillStyles) {
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+}
+
+.Input[data-com-onepassword-filled]:focus:not(.p-Input--delayAutofillStyles) {
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 6px 0px, rgba(5, 115, 225, 0.25) 0px 0px 0px 3px, rgba(0, 0, 0, 0.08) 0px 1px 1px 0px,0 0 0 100px rgb(255, 255, 255) inset !important;
+}</style></head><body><div id="root"><div class="p-HeightObserverProvider"><div class="p-HeightObserverProvider-container"><div class="p-ExpressCheckoutElement de7zKgf4__p-Root p-Locale-pt p-Animatable p-LTR"><div class="p-ExpressCheckoutView"><div class="p-ExpressCheckoutButtonGroup"><div class="p-ExpressCheckoutItem p-ExpressCheckoutItem--overflowLayout p-ExpressCheckoutItem--lastColumn p-ExpressCheckoutItem--firstColumn p-ExpressCheckoutItem--lastRow" style="width: 100%;"><button id="primary" class="LinkButton LinkButton--showFocusIndicator" type="submit" aria-label="Pagar com Link" name="pay_with_link_arrow" style="height: 55px; font-size: 55px;"><span class="LinkButton-inner" style="--halfPaymentDetailHintWidth: 78px; --halfGenericTextWidth: 76px;"><span class="LinkButton-genericText">Pagar com <span role="presentation"><svg class="InlineSVG LinkButton-logoSvg" focusable="false" viewBox="0 0 72 24" fill="none"><path fill="#011E0F" d="M36.12 3.677c0-1.128.95-2.045 2.069-2.045 1.118 0 2.069.922 2.069 2.045a2.075 2.075 0 0 1-2.07 2.069 2.057 2.057 0 0 1-2.068-2.07ZM29.98 1.92h3.6v20.16h-3.6V1.92ZM40.008 7.68h-3.629v14.4h3.629V7.68ZM66.096 14.39c2.731-1.68 4.589-4.18 5.323-6.715H67.79c-.945 2.42-3.115 4.239-5.5 5.011V1.916h-3.63v20.16h3.63V16.08c2.77.691 4.958 3.086 5.707 5.995h3.653c-.557-3.053-2.645-5.909-5.554-7.685ZM46.44 9.293c.95-1.263 2.803-1.997 4.306-1.997 2.803 0 5.121 2.05 5.126 5.146v9.633h-3.629v-8.832c0-1.272-.566-2.74-2.405-2.74-2.16 0-3.403 1.915-3.403 4.156v7.426h-3.629V7.69h3.634v1.603ZM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12Z"></path><path fill="#fff" d="M11.448 4.8h-3.7c.72 3.01 2.821 5.582 5.452 7.2-2.635 1.618-4.733 4.19-5.453 7.2h3.7c.918-2.784 3.457-5.203 6.577-5.698v-3.01c-3.125-.489-5.664-2.908-6.576-5.692Z"></path></svg></span></span><span class="LinkButton-logoHintWrapper"><span class="LinkButton-logo" role="presentation"><svg class="InlineSVG LinkButton-logoSvg" focusable="false" viewBox="0 0 72 24" fill="none"><path fill="#011E0F" d="M36.12 3.677c0-1.128.95-2.045 2.069-2.045 1.118 0 2.069.922 2.069 2.045a2.075 2.075 0 0 1-2.07 2.069 2.057 2.057 0 0 1-2.068-2.07ZM29.98 1.92h3.6v20.16h-3.6V1.92ZM40.008 7.68h-3.629v14.4h3.629V7.68ZM66.096 14.39c2.731-1.68 4.589-4.18 5.323-6.715H67.79c-.945 2.42-3.115 4.239-5.5 5.011V1.916h-3.63v20.16h3.63V16.08c2.77.691 4.958 3.086 5.707 5.995h3.653c-.557-3.053-2.645-5.909-5.554-7.685ZM46.44 9.293c.95-1.263 2.803-1.997 4.306-1.997 2.803 0 5.121 2.05 5.126 5.146v9.633h-3.629v-8.832c0-1.272-.566-2.74-2.405-2.74-2.16 0-3.403 1.915-3.403 4.156v7.426h-3.629V7.69h3.634v1.603ZM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12Z"></path><path fill="#fff" d="M11.448 4.8h-3.7c.72 3.01 2.821 5.582 5.452 7.2-2.635 1.618-4.733 4.19-5.453 7.2h3.7c.918-2.784 3.457-5.203 6.577-5.698v-3.01c-3.125-.489-5.664-2.908-6.576-5.692Z"></path></svg></span><span class="LinkButton-paymentDetailHint"><span class="LinkButton-textDivider"></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" fill="none" viewBox="0 0 24 16" class="Logo CardBrandIcon Logo--cardVisa LinkButton-paymentIcon"><g clip-path="url(#a)"><path fill="#00579f" d="M22 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2"></path><path fill="#fff" d="M10.367 10.91H8.85l.949-5.802h1.517zm5.501-5.66a3.8 3.8 0 0 0-1.36-.247c-1.5 0-2.555.79-2.561 1.92-.013.833.755 1.296 1.33 1.574.587.284.786.469.786.722-.006.389-.474.568-.91.568-.607 0-.931-.092-1.425-.309l-.2-.092-.212 1.302c.356.16 1.012.303 1.692.309 1.593 0 2.63-.778 2.642-1.982.006-.66-.4-1.166-1.274-1.58-.53-.265-.856-.444-.856-.716.006-.247.275-.5.874-.5.493-.012.856.105 1.13.222l.138.062z"></path><path fill="#fff" fill-rule="evenodd" d="M18.584 5.108h1.174l1.224 5.802h-1.405l-.18-.87h-1.95c-.055.154-.318.87-.318.87h-1.592l2.254-5.32c.156-.377.431-.482.793-.482m-.093 2.124-.606 1.623h1.261c-.062-.29-.35-1.679-.35-1.679l-.106-.5a31 31 0 0 1-.2.556" clip-rule="evenodd"></path><path fill="#fff" d="M7.582 5.108 6.096 9.065l-.162-.803c-.275-.926-1.136-1.931-2.098-2.432l1.361 5.074h1.605l2.385-5.796z"></path><path fill="#fff" d="M4.716 5.108H2.275l-.025.118c1.904.481 3.166 1.641 3.684 3.036l-.53-2.666c-.088-.37-.357-.475-.688-.488"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v16H0z"></path></clipPath></defs></svg><div class="AnimateSinglePresence LinkButton-paymentDetailHintText-animationWrapper"><div class="AnimateSinglePresenceItem LinkButton-paymentDetailHintText-animationItem"><span class="LinkButton-paymentDetailHintText">0000</span></div></div></span></span></span></button></div></div></div></div></div><div class="p-HeightObserverProvider-clone" aria-hidden="true"></div></div></div></body></html>
